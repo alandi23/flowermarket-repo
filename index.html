@@ -46,6 +46,8 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.2s;
+      text-align: center;
+      padding-bottom: 15px;
     }
 
     .card:hover {
@@ -67,6 +69,53 @@
       margin: 10px;
       color: #ff3366;
       font-weight: bold;
+    }
+
+    .card button {
+      background: #ff6699;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #ff3366;
+    }
+
+    .cart {
+      background: #ffe6f0;
+      padding: 20px;
+      margin: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .cart h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .cart ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cart li {
+      padding: 8px;
+      background: white;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cart-total {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
     .contact {
@@ -120,22 +169,33 @@
       <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Roses">
       <h3>Red Roses</h3>
       <p>$10 / bouquet</p>
+      <button onclick="addToCart('Red Roses', 10)">Add to Cart</button>
     </div>
     <div class="card">
       <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df" alt="Tulips">
       <h3>Yellow Tulips</h3>
       <p>$8 / bunch</p>
+      <button onclick="addToCart('Yellow Tulips', 8)">Add to Cart</button>
     </div>
     <div class="card">
       <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Lilies">
       <h3>White Lilies</h3>
       <p>$12 / bouquet</p>
+      <button onclick="addToCart('White Lilies', 12)">Add to Cart</button>
     </div>
     <div class="card">
       <img src="https://images.unsplash.com/photo-1508610048659-a06b669e7a65" alt="Sunflowers">
       <h3>Sunflowers</h3>
       <p>$9 / bunch</p>
+      <button onclick="addToCart('Sunflowers', 9)">Add to Cart</button>
     </div>
+  </section>
+
+  <!-- 🛒 Cart Section Added -->
+  <section class="cart">
+    <h2>Your Cart 🛒</h2>
+    <ul id="cart-items"></ul>
+    <p class="cart-total">Total: $<span id="cart-total">0</span></p>
   </section>
 
   <section class="contact">
@@ -150,5 +210,7 @@
 
   <footer>© 2025 Blossom Flower Market | Designed with 🌸</footer>
 
+  <!-- 📌 JavaScript Linked -->
+  <script src="new.js"></script>
 </body>
 </html>
